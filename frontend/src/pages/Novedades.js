@@ -1,8 +1,8 @@
 import React from "react";
 
-const Novedades = (props) => {
+const Novedades = () => {
     return (
-        <div>Novedades</div>
+        <h1>Novedades</h1>
     );
 }
 

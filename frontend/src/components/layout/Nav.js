@@ -1,16 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
 
-const Nav = (props) => {
+const Nav = () => {
     return (
-        <nav class="holder">
-            <ul>
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/Novedades">Novedades</Link></li>
-                <li><Link to="/Productos">Productos</Link></li>
-                <li><Link to="/Contacto">Contactanos</Link></li>
-            </ul>
-        </nav>
+        <>
+            <nav className="holder">
+                <ul>
+                    <li><Link to="">Inicio</Link></li>
+                    <li><Link to="Novedades">Novedades</Link></li>
+                    <li><Link to="Productos">Productos</Link></li>
+                    <li><Link to="Contacto">Contactanos</Link></li>
+                </ul>
+            </nav>
+            <Outlet />
+        </>
 
     );
 }
