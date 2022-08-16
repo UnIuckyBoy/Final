@@ -1,3 +1,14 @@
+body {
+  background-image: url(./images/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0px;
+  min-height: 100vh !important;
+  color: azure;
+}
 .App {
   text-align: center;
 }

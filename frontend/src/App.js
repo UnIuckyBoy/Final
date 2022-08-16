@@ -12,6 +12,7 @@ import Productos from "./pages/Productos"
 function App() {
   return (
     <div className="App">
+      {console.log("funca")}
       <Header/>
       <BrowserRouter>
         <Routes>
