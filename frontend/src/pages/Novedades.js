@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Novedades = () => {
     return (
         <motion.div className="slider-container">
-            <motion.div className="slider" drag='x' dragConstraints={{right: 0, left: -963}}>
+            <motion.div className="slider" drag='x' dragConstraints={{right: 0, left: -1000}}>
                 {images.map(image => (
                     <motion.div className="item">
                         <img src={image} alt="" />

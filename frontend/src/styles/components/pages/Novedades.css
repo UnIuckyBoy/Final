@@ -10,8 +10,8 @@
 }
 .item{
     height: 40rem;
-    max-width: 30rem;
-    padding: 2rem;
+    max-width: 500px;
+    padding: 0.5rem;
 }
 .item img{
     height: 100%;
