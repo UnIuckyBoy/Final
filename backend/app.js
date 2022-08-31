@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fileUpload = require('express-fileupload');
 var cors = require('cors');
-
+var session = require('express-session');
 require('dotenv').config();
 var pool = require('./models/bd');
 
@@ -28,6 +28,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'insertar clave aqui',
+  resave: false,
+  saveUninitialized: true,
+}));
 
 app.use(fileUpload({
   useTempFiles: true,
