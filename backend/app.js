@@ -11,8 +11,8 @@ var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var novedadesRouter = require('./routes/admin/novedades');
 var loginRouter = require('./routes/admin/login');
+var novedadesRouter = require('./routes/admin/novedades');
 //var apiRouter = require('./routes/api');
 
 
@@ -28,10 +28,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/admin/novedades', novedadesRouter);
 app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', novedadesRouter);
 //app.use('/api', cors(), apiRouter);
 
 // catch 404 and forward to error handler
@@ -49,10 +55,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.use(fileUpload({
-  useTempFiles: true,
-  tempFileDir: '/tmp/'
-}));
 
 module.exports = app;
