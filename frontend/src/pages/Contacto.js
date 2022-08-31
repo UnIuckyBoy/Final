@@ -32,7 +32,7 @@ const Contacto = (props) => {
                     </form>
                 </div>
             </div>
-            <div class="columnDatos">
+            <div className="columnDatos">
                 <h2>Otras vias de comunicación</h2>
                 <p>También puede contactarse con nosotros usando los siguintes medios</p>
                 <ul>
