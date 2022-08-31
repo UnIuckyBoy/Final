@@ -14,8 +14,8 @@ const Productos = () => {
             </h1>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{ right: 0, left: -1210 }}>
-                    {images2.map(image => (
-                        <motion.div className="item">
+                    {images2.map((image, cantidad) => (
+                        <motion.div className="item" key={cantidad.toString()}>
                             <img src={image} alt="" />
                         </motion.div>
                     ))}
@@ -28,8 +28,8 @@ const Productos = () => {
             </h1>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{ right: 0, left: -1210 }}>
-                    {images3.map(image => (
-                        <motion.div className="item">
+                    {images3.map((image, cantidad) => (
+                        <motion.div className="item" key={cantidad.toString()}>
                             <img src={image} alt="" />
                         </motion.div>
                     ))}
@@ -42,8 +42,8 @@ const Productos = () => {
             </h1>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{ right: 100, left: 0 }}>
-                    {images4.map(image => (
-                        <motion.div className="item">
+                    {images4.map((image, cantidad) => (
+                        <motion.div className="item" key={cantidad.toString()}>
                             <img src={image} alt="" />
                         </motion.div>
                     ))}

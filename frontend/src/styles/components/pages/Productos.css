@@ -1,19 +1,19 @@
-.slider-container2{
+.slider-container{
     margin: 0 auto;
     overflow-x: hidden;
     width: 1200px;
 }
-.slider2{
+.slider{
     display: flex;
     cursor: grab;
     width: 2400px;
 }
-.item2{
+.item{
     height: 40rem;
     max-width: 500px;
     padding: 1rem;
 }
-.item2 img{
+.item img{
     height: 100%;
     width: 100%;
     pointer-events: none;
