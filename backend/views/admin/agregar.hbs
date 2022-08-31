@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3>Agregar un nuevo Drop</h3>
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="mb-3 row">
+                    <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen"></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

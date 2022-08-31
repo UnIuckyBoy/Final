@@ -1,0 +1,16 @@
+header {
+    color: red;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: inherit;
+    bottom: 35px;
+    background-color: black;
+    width: 100%;
+}
+
+header p {
+    margin-left: 15px;
+    padding: 0px 0 0 50px;
+}

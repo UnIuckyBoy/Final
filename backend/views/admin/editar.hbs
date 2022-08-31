@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3>Editar el Drop</h3>
+            <form action="/admin/novedades/editar" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{novedad.id}}" name="id">
+                <div class="form-group">
+                    <label for="Nombre"></label>
+                    <input type="text" class="form-control" name="nombre" value="{{novedad.nombre}}">
+                </div>
+                 <div class="mb-3 row">
+                    <p>
+                    <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen"></label>
+                    </p>
+                    <p>
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen</label>
+                    <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Editar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
